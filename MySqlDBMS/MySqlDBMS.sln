@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MySqlDBMS", "MySqlDBMS.vcxproj", "{EE1B5559-55AC-4E28-935E-ADDCAF21319B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\Common\Common.vcxproj", "{559B1834-80AB-4FFE-BB74-8E7A922B7120}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Peter", "..\Peter\Peter.vcxproj", "{A5ECBA13-29C4-4EF0-9CF8-C7B547D9AC65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE1B5559-55AC-4E28-935E-ADDCAF21319B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE1B5559-55AC-4E28-935E-ADDCAF21319B}.Debug|Win32.Build.0 = Debug|Win32
+		{EE1B5559-55AC-4E28-935E-ADDCAF21319B}.Release|Win32.ActiveCfg = Release|Win32
+		{EE1B5559-55AC-4E28-935E-ADDCAF21319B}.Release|Win32.Build.0 = Release|Win32
+		{559B1834-80AB-4FFE-BB74-8E7A922B7120}.Debug|Win32.ActiveCfg = Debug|Win32
+		{559B1834-80AB-4FFE-BB74-8E7A922B7120}.Debug|Win32.Build.0 = Debug|Win32
+		{559B1834-80AB-4FFE-BB74-8E7A922B7120}.Release|Win32.ActiveCfg = Release|Win32
+		{559B1834-80AB-4FFE-BB74-8E7A922B7120}.Release|Win32.Build.0 = Release|Win32
+		{A5ECBA13-29C4-4EF0-9CF8-C7B547D9AC65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5ECBA13-29C4-4EF0-9CF8-C7B547D9AC65}.Debug|Win32.Build.0 = Debug|Win32
+		{A5ECBA13-29C4-4EF0-9CF8-C7B547D9AC65}.Release|Win32.ActiveCfg = Release|Win32
+		{A5ECBA13-29C4-4EF0-9CF8-C7B547D9AC65}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
