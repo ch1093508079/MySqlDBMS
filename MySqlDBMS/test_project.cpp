@@ -1,5 +1,5 @@
 #include "..\Common\stdafx.cpp"
-#include "..\Peter\Peter.cpp"
+#include "..\PhysQuery\IterTableScan.cpp"
 
 using std::cin;
 using std::cout;
