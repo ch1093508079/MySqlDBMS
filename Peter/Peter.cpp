@@ -22,5 +22,12 @@ class Peter{
 		InnoDBPage::PageDirectory	pageDirectory;
 		InnoDBPage::FileTrailer		fileTrailer;
 };
-
+int main(){
+	std::cerr<<"Peter Î²²¿\n";
+}
+#ifdef MAIN_IN_PETER
+int main(){
+	std::cerr<<"Peter Î²²¿\n";
+}
+#endif
 #endif

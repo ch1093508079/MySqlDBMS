@@ -1,25 +1,17 @@
-﻿生成启动时间为 2017/7/18 12:07:05。
+﻿生成启动时间为 2017/7/18 12:26:09。
      1>项目“C:\Users\卫花\Documents\GitHub\MySqlDBMS\Peter\Peter.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         F:\Program Files\vs2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Field.cpp InnoDBPage.cpp Peter.cpp Row.cpp RowHeader.cpp
-         Field.cpp
-         正在生成代码...
-         正在编译...
-         RowHeader.cpp
-         Row.cpp
+         F:\Program Files\vs2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Peter.cpp
          Peter.cpp
-         InnoDBPage.cpp
-         正在生成代码...
        Link:
          F:\Program Files\vs2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\Peter.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\Peter.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\Peter.lib" /MACHINE:X86 Debug\Field.obj
          Debug\InnoDBPage.obj
          Debug\Peter.obj
          Debug\Row.obj
          Debug\RowHeader.obj
-     1>MSVCRTD.lib(crtexe.obj) : error LNK2019: 无法解析的外部符号 _main，该符号在函数 ___tmainCRTStartup 中被引用
-     1>C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\Peter.exe : fatal error LNK1120: 1 个无法解析的外部命令
-     1>已完成生成项目“C:\Users\卫花\Documents\GitHub\MySqlDBMS\Peter\Peter.vcxproj”(Build 个目标)的操作 - 失败。
+         Peter.vcxproj -> C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\Peter.exe
+     1>已完成生成项目“C:\Users\卫花\Documents\GitHub\MySqlDBMS\Peter\Peter.vcxproj”(Build 个目标)的操作。
 
-生成失败。
+生成成功。
 
-已用时间 00:00:18.92
+已用时间 00:00:05.25

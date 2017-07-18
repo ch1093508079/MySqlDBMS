@@ -58,4 +58,9 @@ class TableSpace {
 			this->segments["rollback"] = Segment(Segment::Type::ROLLBACK) ;
 		}
 };
+#ifdef MAIN_IN_LOGIN_STORE
+int main(){
+	std::cerr<<"LogicStore Î²²¿\n";
+}
+#endif
 #endif

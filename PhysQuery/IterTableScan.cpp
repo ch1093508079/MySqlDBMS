@@ -60,4 +60,9 @@ std::clog<<"b++\n";
 	}
 	void Close(){}
 };
+#ifdef MAIN_IN_PHYS_QUERY
+int main(){
+	std::cerr<<"PhysQuery Î²²¿\n";
+}
+#endif
 #endif
