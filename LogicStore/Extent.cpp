@@ -30,7 +30,7 @@ public:
 	inline unsigned countPage(){
 		return 64;
 	} 
-	std::array<Page, 64>& getPages(){
+	PageCollection& getPages(){
 		return pages;
 	}
 	Page& refPage(size_t j){

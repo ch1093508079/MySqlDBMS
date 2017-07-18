@@ -43,13 +43,15 @@ class Page {
 			assertion();
 		}
 		Page():type(SYS){ //默认为系统页，用单个row记录列名 
-			std::clog<<"默认构造系统页\n";
+			static unsigned long long call = 0;
+			std::clog<<"pSys"<<(++call)<<"\t";
 			rows.push_back(Row());
 			assertion();
 		}
 		
 		void push(Row&& row){
-			assert(this->isFreeSpace());
+			if( ! this->isFreeSpace())
+				throw "push into non-Free Page";
 			rows.erase(rows.begin(),rows.end());
 			rows.push_back(std::move(row));
 			assertion();

@@ -11,7 +11,7 @@ class TableScan{
 	std::string blockFile;	//TODO:考虑用流类型，可是流不能拷贝？
 	ExtentPtr b  ;
 	TuplePtr  t  ;
-	inline Block& tupleCollect(){ // 函数依赖于 b 的状态 
+	Block& tupleCollect(){ // 函数依赖于 b 的状态 
 		return b->getPages();
 	}
 	TableSpace& ts(){return global::gTableSpace(relationName);}
@@ -24,6 +24,7 @@ public:
 
 	void open(std::string key2seg = "data"){
 		assert(key2seg=="data");
+		assert(ts().existKey(key2seg));
 		if( ! ts().existKey(key2seg)){
 			long long uhex = 0xbadbadbadbad07;
 			throw uhex;

@@ -14,9 +14,9 @@ public:
 		assert(toExtents);
 		//空 Segment 处理
 		if(extents.empty()){
-			expand(); 
-			//以后可考虑在 frag.back() 记录 supremum页的下标
-		} 
+				expand(); 
+				//以后可考虑在 frag.back() 记录 supremum页的下标
+		}
 		assert( ! extents.empty());
 		return pushExtents(std::move(row));
 	}
@@ -25,34 +25,47 @@ public:
 		if( need > 1 ) throw "目前仅支持 < 16KB 的行";
 		return need;
 	}
-	size_t pushExtents(Row&& row){ 
+	size_t pushExtents(Row&& row){
 		auto need = needPage(row);
 		auto &ep = extents.back().getPages();
 		auto supre= std::find_if(ep.begin(), ep.end(), 
 							[](Page p){return p.isSupremum();});
 		assert( supre < ep.end() ); // throw "绝逼是因为 supremum 被行溢出数据覆盖了";
 		int countFreePage = std::distance(supre, ep.end()) - 1;
+		static bool monitorDeadLoopAlert = 0;
 		if(countFreePage ==0){
-			//    空闲页，就申请新Extent再递归调用（最多一次） 
+			if(monitorDeadLoopAlert!=0)
+				std::cerr<<"pushExtents递归调用超过一次\n";
+			monitorDeadLoopAlert = true;
+			//无空闲页，就申请新Extent再递归调用（最多一次） 
 			expand();
-			return pushExtents(std::move(row));
+			//return pushExtents(std::move(row)); // ### 7-18 修改逻辑错误
+			return -1;
 		}
 		else{
+			monitorDeadLoopAlert = 0;
 			assert(countFreePage > 0);
-			//先在 supremum 后面的page构建数据行 
-			(supre+need)->push(/*std::move*/(row));
-			//再交换
+			try{ //先在 supremum 后面的page构建数据行 //再交换
+				assert(need==1);
+				(supre+need)->push(/*std::move*/(row));
+			}catch(...){
+				throw "any exception re-throw in Segment::pushExtents\n";
+			}
 			using std::swap;
 			swap( *supre, *(supre + need) );
 			return 1;
 		}
 	}
 	void expand(){
-		unsigned countExtent = extents.size();
-		switch(countExtent){
-			case 0: case 1:
-			default:
-				extents.push_back(Extent());
+		try{
+			unsigned countExtent = extents.size();
+			switch(countExtent){
+				case 0: case 1:
+				default:
+					extents.push_back(Extent());
+			}
+		}catch(...){
+			std::cerr<<"throw Exceprion: Segment::expand()\n";
 		}
 	} 
 	ExtentCollection& getExtents(){

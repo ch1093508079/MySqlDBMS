@@ -1,5 +1,5 @@
-#ifndef GLOBAL_CPP_CRC32_7C75820E
-#define GLOBAL_CPP_CRC32_7C75820E
+#ifndef GLOBAL_CPP_CRC32_
+#define GLOBAL_CPP_CRC32_
 
 #include "Relation.cpp"
 class TableScan; 
@@ -22,7 +22,25 @@ namespace global{
 			ss<<std::setw(3)<<i;
 			s.back() += 1;
 			Row r ;
-			countLine+= global::gTableSpace(tableName).insert(r);
+			{
+				assert( r.countField() >= 2 );
+				r[0] = ss.str();
+				r[1] = s;
+			}
+			try { countLine += global::gTableSpace(tableName).insert(r); }
+			catch(std::out_of_range ex){
+				std::clog<<"Ô½½ç";
+				throw ex;
+			}
+			catch(const char * str){
+				using std::cerr ;
+				cerr<< std::endl
+					<< std::setw(4)<<"i="<<i
+					<<"throw Exception: "<< str
+				//	<<"where(): iniTableInsert() - for loop - "
+				//	<< std::endl
+					;
+			}
 		}
 		return countLine;
 	}

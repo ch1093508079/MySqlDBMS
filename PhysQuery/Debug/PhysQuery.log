@@ -1,20 +1,20 @@
-﻿生成启动时间为 2017/7/18 12:21:54。
+﻿生成启动时间为 2017/7/18 17:09:27。
      1>项目“C:\Users\卫花\Documents\GitHub\MySqlDBMS\PhysQuery\PhysQuery.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          F:\Program Files\vs2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt IterTableScan.cpp Relation.cpp
-         Relation.cpp
          IterTableScan.cpp
          正在生成代码...
+         正在跳过...(未检测到相关更改)
+         Relation.cpp
        Link:
          F:\Program Files\vs2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\PhysQuery.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\PhysQuery.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\PhysQuery.lib" /MACHINE:X86 Debug\global.obj
          Debug\IterTableScan.obj
          Debug\Relation.obj
      1>IterTableScan.obj : error LNK2005: "class TableSpace & __cdecl global::gTableSpace(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?gTableSpace@global@@YAAAVTableSpace@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 已经在 global.obj 中定义
      1>IterTableScan.obj : error LNK2005: "unsigned int __cdecl global::iniTableInsert(void)" (?iniTableInsert@global@@YAIXZ) 已经在 global.obj 中定义
-     1>MSVCRTD.lib(crtexe.obj) : error LNK2019: 无法解析的外部符号 _main，该符号在函数 ___tmainCRTStartup 中被引用
-     1>C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\PhysQuery.exe : fatal error LNK1120: 1 个无法解析的外部命令
+     1>C:\Users\卫花\Documents\GitHub\MySqlDBMS\MySqlDBMS\Debug\PhysQuery.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
      1>已完成生成项目“C:\Users\卫花\Documents\GitHub\MySqlDBMS\PhysQuery\PhysQuery.vcxproj”(Build 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:10.03
+已用时间 00:00:07.06

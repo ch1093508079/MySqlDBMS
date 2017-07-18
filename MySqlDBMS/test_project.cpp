@@ -18,7 +18,7 @@ void showInsert(unsigned countLine, string tableName){
 		<<endl;
 }
 
-int main(){
+void testScanIBDATA1(){
 	auto scanIBDATA1 = TableScan(); 
 	try{
 		scanIBDATA1.open();
@@ -38,13 +38,20 @@ int main(){
 		else
 			throw ex;
 	}
-	
-	string tableName = "ini";
-	unsigned countLine = global::iniTableInsert();
-	showInsert(countLine, "don't show");
-	
-	auto scanIni = TableScan(tableName); 
+}
+
+void testScanIni(unsigned countLine){
+	auto scanIni = TableScan("ini"); 
 	scanIni.open();
-	for(int i=0;i<70*5;i++) 
+	for(int i=0;i<countLine+5;i++) // ###ÊÔÊÔÔ½½ç
 		scanIni.getNext()->screen();
+}
+
+int main(){
+	//testScanIBDATA1();
+	
+	unsigned countLine = global::iniTableInsert();
+	showInsert(countLine, "show"); // don't 
+	
+	//testScanIni(countLine);
 }

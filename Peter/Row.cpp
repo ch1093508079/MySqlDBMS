@@ -49,6 +49,9 @@ public://###
 		Field& operator[](size_t i){
 			return fields[i];
 		}
+		unsigned countField(){
+			return fields.size();
+		}
 		unsigned space(){ // 返回该行占用的内存空间大小，单位字节
 			unsigned byte = 0;
 			byte += sizeof(Type) ;
