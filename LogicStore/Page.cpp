@@ -1,3 +1,6 @@
+#ifndef PAGE_CPP_CRC32_3CE9AD99
+#define PAGE_CPP_CRC32_3CE9AD99
+
 #include "..\Peter\Peter.cpp"
 class Page {
 	public:
@@ -94,3 +97,4 @@ if(DEBUG_SCREEN) std::cerr<<"\nPage::screen return"<<std::endl;
 			return ss.str();
 		}
 };
+#endif

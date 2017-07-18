@@ -1,3 +1,6 @@
+#ifndef GLOBAL_CPP_CRC32_7C75820E
+#define GLOBAL_CPP_CRC32_7C75820E
+
 #include "Relation.cpp"
 class TableScan; 
 namespace global{
@@ -24,3 +27,4 @@ namespace global{
 		return countLine;
 	}
 }
+#endif

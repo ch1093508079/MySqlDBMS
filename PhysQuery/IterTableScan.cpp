@@ -1,4 +1,7 @@
-//#include "Relation.cpp"
+#ifndef ITER_TABLE_SCAN_CPP_CRC32_C58470B4
+#define ITER_TABLE_SCAN_CPP_CRC32_C58470B4
+
+#include "Relation.cpp"
 #include "global.cpp"
 class TableScan{
 	typedef Segment::ExtentCollection::iterator	ExtentPtr;
@@ -57,3 +60,4 @@ std::clog<<"b++\n";
 	}
 	void Close(){}
 };
+#endif

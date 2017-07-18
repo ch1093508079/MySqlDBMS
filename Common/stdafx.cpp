@@ -1,5 +1,5 @@
-#ifndef STDAFX_CPP_MD5_
-#define STDAFX_CPP_MD5_
+#ifndef STDAFX_CPP_CRC32_80118C21
+#define STDAFX_CPP_CRC32_80118C21
 
 // stdafx.cpp : 只包括标准包含文件的源文件
 // Common.pch 将作为预编译头

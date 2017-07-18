@@ -1,3 +1,6 @@
+#ifndef TABLE_SPACE_CPP_CRC32_B50D8C2C
+#define TABLE_SPACE_CPP_CRC32_B50D8C2C
+
 #include "Segment.cpp"
 class TableSpace {
 	public:
@@ -55,3 +58,4 @@ class TableSpace {
 			this->segments["rollback"] = Segment(Segment::Type::ROLLBACK) ;
 		}
 };
+#endif

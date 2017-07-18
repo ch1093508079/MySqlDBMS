@@ -1,3 +1,6 @@
+#ifndef EXTENT_CPP_CRC32_112144B0
+#define EXTENT_CPP_CRC32_112144B0
+
 #include "Page.cpp"
 class Extent {
 public:
@@ -42,3 +45,4 @@ public:
 		}
 	}
 };
+#endif

@@ -1,5 +1,7 @@
-#include "..\LogicStore\TableSpace.cpp"
+#ifndef RELATION_CPP_CRC32_F5B971B9
+#define RELATION_CPP_CRC32_F5B971B9
 
+#include "..\LogicStore\TableSpace.cpp"
 class Relation{
 	public:
 		inline static bool not_space(char c){
@@ -25,3 +27,4 @@ class Relation{
 			return ( first_not_legal == s.end() ) ;
 		}
 };
+#endif

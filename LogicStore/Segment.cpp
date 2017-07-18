@@ -1,5 +1,7 @@
-#include "Extent.cpp"
+#ifndef SEGMENT_CPP_CRC32_E3651E42
+#define SEGMENT_CPP_CRC32_E3651E42
 
+#include "Extent.cpp"
 class Segment {
 public:
 	typedef std::vector<Extent> ExtentCollection;
@@ -95,3 +97,4 @@ if(DEBUG_GLOBAL)std::cerr<<"\t# "<<j<<" #\t";
 	} 
 };
 typedef Segment BTreeNode;
+#endif
