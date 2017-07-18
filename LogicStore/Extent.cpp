@@ -6,24 +6,24 @@ private:
 	PageCollection pages; //可改为 list 便于有序插入
 	static Page np(){ return Page(Page::Type::FREE_LIST); }
 	static Page np(unsigned cend){
-		Page* p;
+		using namespace std;
+		shared_ptr<Page> p;
 		switch(cend){
 		case 0:
-			p = &( Page(true) );
+			p = make_shared<Page>( Page(true) );
 			break;
 		case 1:
-			p = &( Page(false) );
+			p = make_shared<Page>( Page(false) );
 			break;
 		default:
 			assert(cend>=2 || cend<0);
 			assert(cend>=2);
-			p = &( np() );
+			p = make_shared<Page>( np() );
 			break;
 		}
 		return *p;
 	}
 public:
-	typedef std::array<Page,64> PageCollection;
 	inline unsigned countPage(){
 		return 64;
 	} 
